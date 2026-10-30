@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leads - CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <h2>CRM System</h2>
+
+        <div>
+            <a href="index.html">Dashboard</a>
+            <a href="customers.html">Customers</a>
+            <a href="leads.html">Leads</a>
+            <a href="followups.html">Follow-ups</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Lead Management</h1>
+        <p>Manage potential customers and their status.</p>
+
+        <!-- Add Lead Form -->
+        <div class="form-box">
+
+            <h2>Add Lead</h2>
+
+            <form action="/leads" method="post">
+
+                <label>Lead Name</label>
+                <input type="text" name="name" placeholder="Enter lead name">
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter email">
+
+                <label>Phone</label>
+                <input type="text" name="phone" placeholder="Enter phone number">
+
+                <label>Company</label>
+                <input type="text" name="company" placeholder="Enter company name">
+
+                <label>Status</label>
+                <select name="status">
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Interested">Interested</option>
+                    <option value="Converted">Converted</option>
+                    <option value="Lost">Lost</option>
+                </select>
+
+                <button type="submit">Add Lead</button>
+
+            </form>
+
+        </div>
+
+        <!-- Lead List -->
+        <div class="recent">
+
+            <h2>Lead List</h2>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Rohit</td>
+                    <td>rohit@gmail.com</td>
+                    <td>9876543212</td>
+                    <td>ABC Ltd</td>
+                    <td>Interested</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Priya</td>
+                    <td>priya@gmail.com</td>
+                    <td>9876543213</td>
+                    <td>XYZ Ltd</td>
+                    <td>New</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

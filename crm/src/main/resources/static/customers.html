@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customers - CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <h2>CRM System</h2>
+
+        <div>
+            <a href="index.html">Dashboard</a>
+            <a href="customers.html">Customers</a>
+            <a href="leads.html">Leads</a>
+            <a href="followups.html">Follow-ups</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Customer Management</h1>
+        <p>Add and manage your customers.</p>
+
+        <!-- Add Customer Form -->
+        <div class="form-box">
+
+            <h2>Add Customer</h2>
+
+            <form action="/customers" method="post">
+
+                <label>Customer Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter customer name"
+                    pattern="[A-Za-z ]+"
+                    title="Name should contain only letters and spaces"
+                    required>
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter email"
+                    required>
+
+                <label>Phone</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter 10 digit mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    title="Phone number must contain exactly 10 digits"
+                    required>
+
+                <label>Company</label>
+                <input
+                    type="text"
+                    name="company"
+                    placeholder="Enter company name"
+                    required>
+
+                <label>Address</label>
+                <input
+                    type="text"
+                    name="address"
+                    placeholder="Enter address"
+                    required>
+
+                <button type="submit">Add Customer</button>
+
+            </form>
+
+        </div>
+
+        <!-- Customer List -->
+        <div class="recent">
+
+            <h2>Customer List</h2>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>dharmendra pradhan</td>
+                    <td>dharmendra@gmail.com</td>
+                    <td>9876543210</td>
+                    <td>ABC Ltd</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>abhijeet dipke</td>
+                    <td>abhi@gmail.com</td>
+                    <td>9876543211</td>
+                    <td>XYZ Ltd</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

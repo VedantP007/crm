@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Follow-ups - CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <h2>CRM System</h2>
+
+        <div>
+            <a href="index.html">Dashboard</a>
+            <a href="customers.html">Customers</a>
+            <a href="leads.html">Leads</a>
+            <a href="followups.html">Follow-ups</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Follow-up Management</h1>
+        <p>Manage customer follow-ups and communication.</p>
+
+        <!-- Add Follow-up Form -->
+        <div class="form-box">
+
+            <h2>Add Follow-up</h2>
+
+            <form action="/followups" method="post">
+
+                <label>Customer Name</label>
+                <input type="text" name="customerName"
+                       placeholder="Enter customer name">
+
+                <label>Date</label>
+                <input type="date" name="date">
+
+                <label>Purpose</label>
+                <input type="text" name="purpose"
+                       placeholder="Enter purpose">
+
+                <label>Status</label>
+                <select name="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <label>Notes</label>
+                <input type="text" name="notes"
+                       placeholder="Enter notes">
+
+                <button type="submit">Add Follow-up</button>
+
+            </form>
+
+        </div>
+
+        <!-- Follow-up List -->
+        <div class="recent">
+
+            <h2>Follow-up List</h2>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Rahul Patil</td>
+                    <td>15-08-2026</td>
+                    <td>Product discussion</td>
+                    <td>Pending</td>
+                    <td>Call tomorrow</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Amit Sharma</td>
+                    <td>16-08-2026</td>
+                    <td>Service discussion</td>
+                    <td>Completed</td>
+                    <td>Customer satisfied</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
